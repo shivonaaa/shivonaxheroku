@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bell Peppers | Welcome</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="jquery-3.4.1.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1><span class="highlight">Bell</span> Peppers</h1>
+        </div>
+        <nav>
+          <ul>
+            <li class="current"><a href="index.html">Home</li>
+              <li><a href="menupage.html">menu</a></li>
+            <li><a href="gallerypage.html">Gallery</a></li>
+            <li><a href="conditionpage.html">Terms and conditions</a></li>
+            <li><a href="uspage.html">More about us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section id="showcase">
+      <div class="container">
+        <h1>WELCOME TO BELL PEPPERS</h1>
+        <p>Looking for a perfect food affair to complement your special occasion? Look no further! Bell Peppers Caterers provide a sumptuous food itinerary to fulfill your each and every catering need. Be it a large, mid or small sized event, our full-range of outdoor and indoor catering services cover complete food preparation and presentation for formal and informal gatherings.We offer live food displays & flambe on Grills like: Chicken Shaslick, Grilled Prawns a bit of Indian touch with the Romali Roti, onsite Chinese cooking which adds aroma and glamour to your occassion.
+            There’s nothing to beat JIMSON’S ‘Bhangarachem Goechem Randop’ from Park Sorpotel, Sannas, prawn Curry, Vindalo, Caffreal, Kishmore servede on banana leaves and in earthen ware which gives a Goan ambience to your setup.
+            </p>
+      </div>
+    </section>
+
+    <section id="newsletter">
+
+        <h1>Subscribe To Our Newsletter</h1>
+
+        <form name="reg_form" onsubmit="return validateform()"  >
+
+                <label>Email:<input type="text" name="email"  value="" id="em"/></label>
+        <label>Password:<input type="password" name="password" value="" id="yu"/></label>
+
+
+
+                <input class="button_1" type="submit" value="Register" name="submitbtn" />
+<input class="button_2" type="reset" value="Reset" name="submitbtn" />
+      </form>
+
+    <br><br><br><br><br>
+    </section>
+    <script>
+
+
+   $(document).ready(function(){
+
+$("input").focus(function(){
+
+$(this).next("span").show().fadeOut(10000);
+
+});
+
+});
+
+      function validateform() {
+
+
+                var x = document.reg_form.email.value;
+                var atposition = x.indexOf("@");
+                var dotposition = x.lastIndexOf(".");
+                var y = document.reg_form.password.value;
+                if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= x.length) {
+                    alert("Please enter a valid e-mail address");
+         $("#em").focus();
+                    return false;
+                }
+                 if (y.length<=8) {
+                    alert("Please enter a valid password");
+         $("#yu").focus();
+                    return false;
+                }
+                else {
+                  alert("Thank you for subscribing to our email... latest updates would be communicated to you via email");
+                }
+
+
+            }
+
+      </script>
+
+    <footer>
+      <p>Bell Peppers, Copyright &copy; 2017</p>
+    </footer>
+  </body>
+</html>
