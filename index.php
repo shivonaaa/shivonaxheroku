@@ -5,7 +5,8 @@ include_once("database.php");
 {	 
 	 $email = $_POST['email'];
 	 $password = $_POST['password'];
-	  //$query1 = "create table if not exists user (email varchar(225),password varchar(255))";
+	 $query1 = "create table if not exists user (email varchar(225),password varchar(255))";
+	 pg_query($query1);
 	 $query = "INSERT INTO user(email,password) 
   values ('$email','$password')";
 	 if($result = pg_query($query)){
