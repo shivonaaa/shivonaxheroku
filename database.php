@@ -1,7 +1,7 @@
 <?php
-$host        = "host = ec2-54-145-224-156.compute-1.amazonaws.com";
+$host        = "host = ec2-3-89-0-52.compute-1.amazonaws.com";
    $port        = "port = 5432";
-   $dbname      = "dbname = ddclaq7bt5689h";
-   $credentials = "user = iptoqvhcamsfjd password=63a6364abf6d776bb81c2eafecb287f28202f2cca4cb13908ee81588724f93f9";
+   $dbname      = "dbname = d6gp8vqko1kjp4";
+   $credentials = "user = qgesydgngnicok password=efbe6e85ebd0bbe3bcb94aeb5a79e66a5c62ac58e72534d3f2ee3b716aee4746";
    $db = pg_connect( "$host $port $dbname $credentials");
 ?>
